@@ -13,6 +13,7 @@
 
   
   <ItemGroup>
+    <AvaloniaResource Remove="Assets\DarkResourceDictionary.axaml" />
     <AvaloniaResource Remove="Assets\Icons.axaml" />
   </ItemGroup>
 
@@ -23,6 +24,12 @@
     <PackageReference Include="Avalonia.ReactiveUI" Version="$(AvaloniaVersion)" />
     <!--Condition below is needed to remove Avalonia.Diagnostics package from build output in Release configuration.-->
     <PackageReference Condition="'$(Configuration)' == 'Debug'" Include="Avalonia.Diagnostics" Version="$(AvaloniaVersion)" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <AvaloniaXaml Update="Assets\ResourceDictionaries\Dark.axaml">
+      <SubType>Designer</SubType>
+    </AvaloniaXaml>
   </ItemGroup>
 
   <ItemGroup>

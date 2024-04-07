@@ -16,9 +16,10 @@
 			   DisplayMode="CompactInline">
 		<!--Боковое меню-->
 		<SplitView.Pane>
-			<StackPanel Spacing="5"
+			<StackPanel Spacing="15"
 						Margin="5">
-				<Button Command="{Binding OpenPaneCommand}">
+				<Button Command="{Binding OpenPaneCommand}"
+						Margin="5">
 					<PathIcon Data="{StaticResource ThreeHorizontalLines}"/>
 				</Button>
 				

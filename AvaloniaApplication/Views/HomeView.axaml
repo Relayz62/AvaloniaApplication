@@ -6,5 +6,24 @@
              mc:Ignorable="d" d:DesignWidth="800" d:DesignHeight="450"
              x:Class="AvaloniaApplication.Views.HomeView"
 			 x:DataType="vm:HomeViewModel">
-	Home View
+
+	<Panel>
+		<TextBlock Text="Главная"
+				   FontSize="20"
+		   DockPanel.Dock="Left"
+		   HorizontalAlignment="Left"
+				   Margin="50,20,5,5"/>
+		
+		<Border Margin="50" CornerRadius="10" Background="{StaticResource BackgroundBrush}">
+			
+			<DockPanel HorizontalAlignment="Stretch">
+			<TextBlock Text="HELLO, WORLD!" 
+					   DockPanel.Dock="Top"
+					   HorizontalAlignment="Center"
+					   Margin="50"
+					   FontSize="50"/>
+			</DockPanel>
+			
+		</Border>
+	</Panel>
 </UserControl>

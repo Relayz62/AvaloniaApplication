@@ -2,6 +2,7 @@
 using ReactiveUI;
 using System;
 using System.Collections.ObjectModel;
+using System.Linq;
 
 namespace AvaloniaApplication.ViewModels;
 
@@ -13,6 +14,7 @@ public class MainViewModel : ViewModelBase
         InitializeSideMenu();
 
         OpenPaneCommand = ReactiveCommand.Create(OpenPane);
+        SelectedSideMenuItem = SideMenuItems!.First();
         CurrentView = new HomeViewModel();
     }
 
