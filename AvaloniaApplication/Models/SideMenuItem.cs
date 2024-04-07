@@ -1,4 +1,7 @@
 ﻿
+using Avalonia;
+using Avalonia.Controls;
+using Avalonia.Media;
 using System;
 
 namespace AvaloniaApplication.Models
@@ -16,7 +19,15 @@ namespace AvaloniaApplication.Models
             Title = title;
         }
 
+        public SideMenuItem(Type type, string title, string iconKey) : this(type, title)
+        {
+            Application.Current!.TryFindResource(iconKey, out var icon);
+            Icon = (StreamGeometry)icon;
+        }
+
         public Type Type { get; set; }
         public string Title { get; set; }
+
+        public StreamGeometry Icon { get; set; }
     }
 }

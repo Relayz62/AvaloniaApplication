@@ -11,14 +11,15 @@
 
 	<SplitView Name="SideBar"
 			   IsPaneOpen="{Binding IsPaneOpen}"
-			   CompactPaneLength="50"
+			   CompactPaneLength="55"
 			   OpenPaneLength="200"
 			   DisplayMode="CompactInline">
 		<!--Боковое меню-->
 		<SplitView.Pane>
-			<StackPanel Spacing="5">
+			<StackPanel Spacing="5"
+						Margin="5">
 				<Button Command="{Binding OpenPaneCommand}">
-					-
+					<PathIcon Data="{StaticResource ThreeHorizontalLines}"/>
 				</Button>
 				
 				<ListBox ItemsSource="{Binding SideMenuItems}"
@@ -27,6 +28,7 @@
 						<DataTemplate DataType="{x:Type m:SideMenuItem}">
 							<StackPanel Spacing="15"
 										Orientation="Horizontal">
+								<PathIcon Data="{Binding Icon}"/>
 								<TextBlock Text="{Binding Title}"/>
 							</StackPanel>
 						</DataTemplate>

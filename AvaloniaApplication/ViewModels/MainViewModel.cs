@@ -60,8 +60,8 @@ public class MainViewModel : ViewModelBase
     {
         SideMenuItems = new()
         {
-            new SideMenuItem(typeof(HomeViewModel)),
-            new SideMenuItem(typeof(WeatherViewModel)),
+            new SideMenuItem(typeof(HomeViewModel),"Главная","Home"),
+            new SideMenuItem(typeof(WeatherViewModel),"Погода","Weather"),
         };
     }
 
