@@ -12,6 +12,17 @@
 		Width="800"
 		MinHeight="600"
 		MinWidth="800"
-		WindowStartupLocation="CenterScreen">
-        <views:MainView />
+		WindowStartupLocation="CenterScreen"
+        ExtendClientAreaToDecorationsHint="True">
+
+	<Grid RowDefinitions="30,*">
+		<!-- Заголовок -->
+		<Grid ColumnDefinitions="Auto,*" IsHitTestVisible="False" Background="#121212">
+			<Image Source="avares://AvaloniaApplication/Assets/avalonia-logo.ico" Grid.Column="0" VerticalAlignment="Center"  Width="18" Margin="12,0,12,0" ></Image>
+			<TextBlock  Grid.Column="1" VerticalAlignment="Center" FontSize="12">Exploring Avalonia</TextBlock>
+		</Grid>
+
+		<!-- Основной контент -->
+		<views:MainView Grid.Row="1"/>
+	</Grid>
 </Window>
