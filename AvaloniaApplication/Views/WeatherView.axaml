@@ -15,7 +15,13 @@
 		<StackPanel Orientation="Horizontal"
 		            Spacing="15"
 		            Margin="50,20,50,0">
-			<TextBox Watermark="Найти город.."></TextBox>
+			<TextBox Watermark="Найти город.."
+			         MaxLength="20"
+			         HorizontalContentAlignment="Left"
+			         VerticalContentAlignment="Center"
+			         AcceptsReturn="True"
+			         Width="200"
+			         MinWidth="200"/>
 			<Button>+</Button>
 			<Button>-</Button>
 		</StackPanel>
