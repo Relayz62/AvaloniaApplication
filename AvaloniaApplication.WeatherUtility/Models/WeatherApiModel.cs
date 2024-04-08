@@ -1,6 +1,6 @@
 ﻿namespace AvaloniaApplication.WeatherUtility.Models;
 
-public class WeatherModel
+public class WeatherApiModel
 {
     
 }
