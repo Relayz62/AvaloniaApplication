@@ -14,7 +14,9 @@
 		   HorizontalAlignment="Left"
 				   Margin="50,20,5,5"/>
 		
-		<Border Margin="50" CornerRadius="10" Background="{DynamicResource BackgroundBrush}">
+		<Border Margin="50" 
+		        CornerRadius="10" 
+		        Background="{DynamicResource BackgroundBrush}">
 			
 			<DockPanel HorizontalAlignment="Stretch">
 			<TextBlock Text="HELLO, WORLD!" 

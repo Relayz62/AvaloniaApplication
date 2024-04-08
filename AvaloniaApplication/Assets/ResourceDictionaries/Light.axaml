@@ -1,6 +1,7 @@
 <ResourceDictionary xmlns="https://github.com/avaloniaui"
                     xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml">
 	
-	<SolidColorBrush x:Key="BackgroundBrush">#FFFFFF</SolidColorBrush>
+	<SolidColorBrush x:Key="BackgroundBrush">#f2f2f2</SolidColorBrush>
+	<SolidColorBrush x:Key="WindowChromeBrush">#f2f2f2</SolidColorBrush>
 	
 </ResourceDictionary>

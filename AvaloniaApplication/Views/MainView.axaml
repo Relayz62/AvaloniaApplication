@@ -7,8 +7,7 @@
              mc:Ignorable="d" d:DesignWidth="600" d:DesignHeight="450"
              x:Class="AvaloniaApplication.Views.MainView"
              x:DataType="vm:MainViewModel">
-
-
+	
 	<SplitView Name="SideBar"
 			   IsPaneOpen="{Binding IsPaneOpen}"
 			   CompactPaneLength="55"
@@ -16,8 +15,14 @@
 			   DisplayMode="CompactInline">
 		<!--Боковое меню-->
 		<SplitView.Pane>
-			<StackPanel Spacing="15"
-						Margin="5">
+			<Grid Margin="5">
+				<Grid.RowDefinitions>
+					<RowDefinition Height="Auto"></RowDefinition>
+					<RowDefinition Height="7*"></RowDefinition>
+					<RowDefinition Height="*"></RowDefinition>
+				</Grid.RowDefinitions>
+				<StackPanel Spacing="15"
+				            Grid.Row="0">
 				<Button Command="{Binding OpenPaneCommand}"
 						Margin="5">
 					<PathIcon Data="{StaticResource ThreeHorizontalLines}"/>
@@ -35,7 +40,13 @@
 						</DataTemplate>
 					</ListBox.ItemTemplate>
 				</ListBox>
-			</StackPanel>
+				</StackPanel>
+				<Button Margin="5"
+				        Grid.Row="2"
+				        Command="{Binding ChangeThemeCommand}">
+					<PathIcon Data="{StaticResource Theme}"/>
+				</Button>
+			</Grid>
 		</SplitView.Pane>
 		<!--Контент-->
 		<SplitView.Content>

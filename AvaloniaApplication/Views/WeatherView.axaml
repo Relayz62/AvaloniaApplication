@@ -7,5 +7,30 @@
              mc:Ignorable="d" d:DesignWidth="800" d:DesignHeight="450"
              x:Class="AvaloniaApplication.Views.WeatherView"
 			 x:DataType="vm:WeatherViewModel">
-	Weather View
+	<Panel>
+		<TextBlock Text="Погода"
+		           FontSize="20"
+		           DockPanel.Dock="Left"
+		           HorizontalAlignment="Left"
+		           Margin="50,20,5,5"/>
+		
+		<Border Margin="50" CornerRadius="10" Background="{DynamicResource BackgroundBrush}">
+			
+			<DataGrid x:Name="WeatherGrid"
+			          Margin="20"
+			          ItemsSource="{Binding WeathersInfo}"
+			          IsReadOnly="True"
+			          GridLinesVisibility="All"
+			          BorderThickness="1"
+			          BorderBrush="Gray">
+				<DataGrid.Columns>
+					<DataGridTextColumn Header="City"
+					                    Binding="{Binding City}"/>
+					<DataGridTextColumn Header="Temperature"
+					                    Binding="{Binding Temperature}"/>
+				</DataGrid.Columns>
+			</DataGrid>
+			
+		</Border>
+	</Panel>
 </UserControl>

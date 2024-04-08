@@ -2,5 +2,6 @@
                     xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml">
 	
 	<SolidColorBrush x:Key="BackgroundBrush">#141414</SolidColorBrush>
+	<SolidColorBrush x:Key="WindowChromeBrush">#161616</SolidColorBrush>
 	
 </ResourceDictionary>

@@ -3,6 +3,8 @@ using ReactiveUI;
 using System;
 using System.Collections.ObjectModel;
 using System.Linq;
+using Avalonia;
+using Avalonia.Styling;
 
 namespace AvaloniaApplication.ViewModels;
 
@@ -14,6 +16,7 @@ public class MainViewModel : ViewModelBase
         InitializeSideMenu();
 
         OpenPaneCommand = ReactiveCommand.Create(OpenPane);
+        ChangeThemeCommand = ReactiveCommand.Create(ChangeTheme);
         SelectedSideMenuItem = SideMenuItems!.First();
         CurrentView = new HomeViewModel();
     }
@@ -50,11 +53,21 @@ public class MainViewModel : ViewModelBase
 
     #region Commands and Implementations
     public IReactiveCommand OpenPaneCommand { get; private set; }
+    
+    public IReactiveCommand ChangeThemeCommand { get; private set; }
 
-    private void OpenPane()
+    private void OpenPane() => IsPaneOpen = !IsPaneOpen;
+
+    private void ChangeTheme()
     {
-        IsPaneOpen = !IsPaneOpen;
+        var currentRequestedThemeVariant = Application.Current.RequestedThemeVariant;
+        
+        if(currentRequestedThemeVariant == ThemeVariant.Light)
+            Application.Current.RequestedThemeVariant = ThemeVariant.Dark;
+        else
+            Application.Current.RequestedThemeVariant = ThemeVariant.Light;
     }
+
     #endregion
 
 
