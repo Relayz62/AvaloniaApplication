@@ -3,19 +3,24 @@
              xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
              xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
 			 xmlns:vm="using:AvaloniaApplication.ViewModels"
-			 xmlns:m="using:AvaloniaApplication.Models"
              mc:Ignorable="d" d:DesignWidth="800" d:DesignHeight="450"
              x:Class="AvaloniaApplication.Views.WeatherView"
 			 x:DataType="vm:WeatherViewModel">
-	<Panel>
+	<StackPanel Spacing="15">
 		<TextBlock Text="Погода"
 		           FontSize="20"
 		           DockPanel.Dock="Left"
 		           HorizontalAlignment="Left"
 		           Margin="50,20,5,5"/>
-		
-		<Border Margin="50" CornerRadius="10" Background="{DynamicResource BackgroundBrush}">
-			
+		<StackPanel Orientation="Horizontal"
+		            Spacing="15"
+		            Margin="50,20,50,0">
+			<TextBox Watermark="Найти город.."></TextBox>
+			<Button>+</Button>
+			<Button>-</Button>
+		</StackPanel>
+		<StackPanel>
+		<Border Margin="50,0,50,0" CornerRadius="10" Background="{DynamicResource BackgroundBrush}">
 			<DataGrid x:Name="WeatherGrid"
 			          Margin="20"
 			          ItemsSource="{Binding WeathersInfo}"
@@ -32,5 +37,6 @@
 			</DataGrid>
 			
 		</Border>
-	</Panel>
+		</StackPanel>
+	</StackPanel>
 </UserControl>
