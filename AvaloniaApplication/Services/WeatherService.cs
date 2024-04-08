@@ -6,9 +6,9 @@ namespace AvaloniaApplication.Services;
 
 public class WeatherService
 {
-    public IEnumerable<Weather> GetWeathers() => new List<Weather>()
+    public IEnumerable<WeatherModel> GetWeathers() => new List<WeatherModel>()
     {
-        new Weather() { City = "Ryazan", Temperature = 12 },
-        new Weather() { City = "Moscow", Temperature = 12 },
+        new WeatherModel() { City = "Ryazan", Temperature = 12 },
+        new WeatherModel() { City = "Moscow", Temperature = 12 },
     };
 }

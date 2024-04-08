@@ -10,9 +10,9 @@ namespace AvaloniaApplication.ViewModels
         public WeatherViewModel()
         {
             var service = new WeatherService();
-            WeathersInfo = new ObservableCollection<Weather>(service.GetWeathers());
+            WeathersInfo = new ObservableCollection<WeatherModel>(service.GetWeathers());
         }
         
-        public ObservableCollection<Weather> WeathersInfo { get; private set; }
+        public ObservableCollection<WeatherModel> WeathersInfo { get; private set; }
     }
 }
