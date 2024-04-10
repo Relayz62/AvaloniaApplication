@@ -44,4 +44,8 @@
       <SubType>Designer</SubType>
     </AvaloniaXaml>
   </ItemGroup>
+
+  <ItemGroup>
+    <ProjectReference Include="..\AvaloniaApplication.GeocodingUtility\AvaloniaApplication.GeocodingUtility.csproj" />
+  </ItemGroup>
 </Project>

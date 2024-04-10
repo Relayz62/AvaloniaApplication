@@ -24,6 +24,7 @@
 					   HorizontalAlignment="Center"
 					   Margin="50"
 					   FontSize="50"/>
+			<Button Command="{Binding DebugCommand}">Debug</Button>
 			</DockPanel>
 			
 		</Border>
